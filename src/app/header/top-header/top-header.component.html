@@ -1,1 +1,59 @@
-<mat-toolbar></mat-toolbar>
+<mat-toolbar class="header">
+  <!-- Amazon logo -->
+  <div class="header__container">
+    <div>
+      <img
+        width="100"
+        alt="Amazon logo"
+        class="header__logo"
+        src="assets/data/images/logo.svg"
+      />
+    </div>
+    <p class="header__logo__text">.in</p>
+  </div>
+
+  <!-- Customer location & logo -->
+  <div class="header__container">
+    <img
+      alt="Location logo"
+      class="header__location__logo"
+      src="assets/data/images/location.svg"
+    />
+    <div class="header__location__container">
+      <span class="header__location__container__text-top"
+        >Deliver to Shashank</span
+      >
+      <span class="header__location__container__text-bottom"
+        >Bhagalpur 813209</span
+      >
+    </div>
+  </div>
+
+  <!-- Search box with dropdown & serach button -->
+  <div class="header__search-container">
+    <mat-toolbar class="header__search-container__toolbar">
+      <mat-label class="header__search-container__toolbar__search-opt__label"
+        >All</mat-label
+      >
+      <mat-select class="header__search-container__toolbar__search-opt">
+      </mat-select>
+      <textarea
+        matInput
+        class="header__search-container__toolbar__text"
+      ></textarea>
+      <div mat-button class="header__search-container__toolbar__button"></div>
+    </mat-toolbar>
+  </div>
+
+  <!-- Language & Country -->
+  <div></div>
+
+  <!-- Hello customer, Account & lists modal -->
+  <div></div>
+
+  <!-- Returns & Orders -->
+  <div></div>
+
+  <!-- Cart logo & button -->
+  <div></div>
+</mat-toolbar>
