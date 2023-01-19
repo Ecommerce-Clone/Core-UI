@@ -1,0 +1,65 @@
+$header-color: #232f3e
+$header-font-color: #fff
+$logo: url(assets/data/images/logo.svg)
+$button-color: #f3a847
+
+.header
+    background: $header-color
+
+    &__container
+        display: flex
+        padding: 0.5em
+
+    &__logo
+        padding: 17px 0 0 0
+
+        &__text
+            color: $header-font-color
+            padding: 10px 0 0 0
+
+    &__location
+        &__logo
+            width: 20px
+            height: 20px
+            padding: 8px 0 0 0
+
+        &__container
+            display: flex
+            flex-direction: column
+            color: $header-font-color
+
+            &__text-top
+                font-size: 11px
+                font-weight: 400
+                color: #e2e7ee
+                line-height: 1em
+                padding: 0 0 2px 0
+
+            &__text-bottom
+                font-size: 15px
+                line-height: 1em
+
+    &__search-container
+        padding: 0.5em
+
+        &__toolbar
+            padding: 0
+            height: 2.2em
+
+            &__search-opt
+                width: 25px
+
+                &__label
+                    padding: 0 0 0 10px
+                    font-size: xx-small
+                    font-weight: 400
+                    color: #555
+
+            &__text
+                width: 430px
+                height: 39px
+
+            &__button
+                background: $button-color
+                height: 44px
+                width: 40px
