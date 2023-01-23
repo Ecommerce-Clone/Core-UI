@@ -19,13 +19,9 @@
       class="header__location__logo"
       src="assets/data/images/location.svg"
     />
-    <div class="header__location__container">
-      <span class="header__location__container__text-top"
-        >Deliver to Shashank</span
-      >
-      <span class="header__location__container__text-bottom"
-        >Bhagalpur 813209</span
-      >
+    <div class="header__text-container">
+      <span class="header__text-top">Deliver to Shashank</span>
+      <span class="header__text-bottom">Bhagalpur 813209</span>
     </div>
   </div>
 
@@ -35,25 +31,53 @@
       <mat-label class="header__search-container__toolbar__search-opt__label"
         >All</mat-label
       >
-      <mat-select class="header__search-container__toolbar__search-opt">
+      <mat-select
+        class="header__search-container__toolbar__search-opt"
+        disableRipple
+        panelClass=""
+      >
+        <mat-option *ngFor="let category of categories">
+          {{ category }}
+        </mat-option>
       </mat-select>
-      <textarea
+      <input
+        type="text"
         matInput
         class="header__search-container__toolbar__text"
-      ></textarea>
+      />
       <div mat-button class="header__search-container__toolbar__button"></div>
     </mat-toolbar>
   </div>
 
   <!-- Language & Country -->
-  <div></div>
+  <div class="header__container">
+    <mat-select class="header__region-modal">
+      <mat-option *ngFor="let pair of languages | keyvalue"
+        >{{ pair.key }}-{{ pair.value }}</mat-option
+      >
+      <mat-option>Learn more</mat-option>
+      <mat-option>You are shopping on Amazon.in</mat-option>
+      <mat-option>Change country/region.</mat-option>
+    </mat-select>
+  </div>
 
   <!-- Hello customer, Account & lists modal -->
-  <div></div>
+  <div class="header__container">
+    <div class="header__account-modal header__text-container">
+      <span class="header__text-top">Hello, shashank</span>
+      <span class="header__text-bottom">Account & Lists</span>
+    </div>
+    <mat-select class="header__account-modal__select"></mat-select>
+  </div>
 
   <!-- Returns & Orders -->
-  <div></div>
+  <div class="header__container">
+    <div class="header__orders header__text-container">
+      <span class="header__text-top">Returns</span>
+      <span class="header__text-bottom">& Orders</span>
+    </div>
+  </div>
 
   <!-- Cart logo & button -->
-  <div></div>
+  <div class="header__container header__text-container">Cart</div>
 </mat-toolbar>
