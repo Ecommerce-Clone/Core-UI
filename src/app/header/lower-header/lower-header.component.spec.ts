@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LowerHeaderComponent } from './lower-header.component';
+import LowerHeaderComponent from './lower-header.component';
 
 describe('LowerHeaderComponent', () => {
   let component: LowerHeaderComponent;
