@@ -1,3 +1,20 @@
 <mat-toolbar class="header">
-    <div *ngFor="let item of list1" class="header__items"><div class="header__items__item">{{item}}</div></div>
+  <div class="header__container-left__items__item">
+  <button mat-icon-button color="accent" aria-label="Example icon button with a menu icon" class="header__menu">
+    <mat-icon>menu</mat-icon>
+  </button>All
+  </div>
+  <div class="header__container-left">
+    <div *ngFor="let item of list1" class="header__container-left__items">
+      <div class="header__container-left__items__item">
+        {{item}}
+      </div>
+    </div>
+  </div>
+  <div class="header__container-right">
+    <div class="header__container-right__image header__container-left__items">
+      <img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/X-site/SingleTitle/Drishyam2/400x39-SWM_NP._CB617550659_.jpg">
+    </div>
+  </div>
+  
   </mat-toolbar>
