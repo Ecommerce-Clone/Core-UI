@@ -1,9 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-interface language {
-  [key: string]: string;
-}
-
 @Component({
   selector: 'app-top-header',
   templateUrl: './top-header.component.html',
@@ -65,6 +61,8 @@ export class TopHeaderComponent implements OnInit {
     বাংলা: 'BN',
     मराठी: 'MR',
   };
+
+  selected = { English: 'EN' };
 
   constructor() {}
 

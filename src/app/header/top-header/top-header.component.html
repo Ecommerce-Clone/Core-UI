@@ -51,6 +51,11 @@
 
   <!-- Language & Country -->
   <div class="header__container">
+    <img
+      src="assets/data/images/india.svg"
+      style="height: 20px; width: 20px; margin: 18px 0 0 0"
+    />
+    <p style="color: #fff; margin: 12px 0 0 0; font-size: 14px">EN</p>
     <mat-select class="header__region-modal">
       <mat-option *ngFor="let pair of languages | keyvalue"
         >{{ pair.key }}-{{ pair.value }}</mat-option
