@@ -84,5 +84,24 @@
   </div>
 
   <!-- Cart logo & button -->
-  <div class="header__container header__text-container">Cart</div>
+  <div
+    class="header__container header__text-container"
+    style="flex-direction: row"
+  >
+    <div>
+      <p
+        style="
+          font-size: 15px;
+          margin: -4px 0 -17px 13px;
+          z-index: 1;
+          position: relative;
+          color: #f3a847;
+        "
+      >
+        {{ itemsInCart }}
+      </p>
+      <img src="assets/data/images/cart.svg" style="width: 30px" />
+    </div>
+    <p style="margin: 15px 0 0 0; font-size: 15px">Cart</p>
+  </div>
 </mat-toolbar>

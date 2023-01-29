@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./top-header.component.sass'],
 })
 export class TopHeaderComponent implements OnInit {
+  itemsInCart = 0;
+
   categories: string[] = [
     'All Categories',
     'Alexa Skills',
