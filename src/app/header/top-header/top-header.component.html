@@ -20,8 +20,8 @@
       src="assets/data/images/location.svg"
     />
     <div class="header__text-container">
-      <span class="header__text-top">Deliver to Shashank</span>
-      <span class="header__text-bottom">Bhagalpur 813209</span>
+      <span class="header__text-top">Hello</span>
+      <span class="header__text-bottom">Select your address</span>
     </div>
   </div>
 
@@ -51,6 +51,11 @@
 
   <!-- Language & Country -->
   <div class="header__container">
+    <img
+      src="assets/data/images/india.svg"
+      style="height: 20px; width: 20px; margin: 18px 0 0 0"
+    />
+    <p style="color: #fff; margin: 12px 0 0 0; font-size: 14px">EN</p>
     <mat-select class="header__region-modal">
       <mat-option *ngFor="let pair of languages | keyvalue"
         >{{ pair.key }}-{{ pair.value }}</mat-option
@@ -64,7 +69,7 @@
   <!-- Hello customer, Account & lists modal -->
   <div class="header__container">
     <div class="header__account-modal header__text-container">
-      <span class="header__text-top">Hello, shashank</span>
+      <span class="header__text-top">Hello, signin</span>
       <span class="header__text-bottom">Account & Lists</span>
     </div>
     <mat-select class="header__account-modal__select"></mat-select>
@@ -79,5 +84,24 @@
   </div>
 
   <!-- Cart logo & button -->
-  <div class="header__container header__text-container">Cart</div>
+  <div
+    class="header__container header__text-container"
+    style="flex-direction: row"
+  >
+    <div>
+      <p
+        style="
+          font-size: 15px;
+          margin: -4px 0 -17px 13px;
+          z-index: 1;
+          position: relative;
+          color: #f3a847;
+        "
+      >
+        {{ itemsInCart }}
+      </p>
+      <img src="assets/data/images/cart.svg" style="width: 30px" />
+    </div>
+    <p style="margin: 15px 0 0 0; font-size: 15px">Cart</p>
+  </div>
 </mat-toolbar>

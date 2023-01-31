@@ -1,15 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
-interface language {
-  [key: string]: string;
-}
-
 @Component({
   selector: 'app-top-header',
   templateUrl: './top-header.component.html',
   styleUrls: ['./top-header.component.sass'],
 })
 export class TopHeaderComponent implements OnInit {
+  itemsInCart = 0;
+
   categories: string[] = [
     'All Categories',
     'Alexa Skills',
@@ -65,6 +63,8 @@ export class TopHeaderComponent implements OnInit {
     বাংলা: 'BN',
     मराठी: 'MR',
   };
+
+  selected = { English: 'EN' };
 
   constructor() {}
 

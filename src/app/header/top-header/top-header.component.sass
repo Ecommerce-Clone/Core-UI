@@ -12,6 +12,10 @@ $button-color: #f3a847
         cursor: pointer
 
         &:hover
+            border-style: solid
+            border-width: 0.5px
+            border-radius: 1px
+            border-color: #ffffff
 
     &__text-container
         display: flex
@@ -74,13 +78,18 @@ $button-color: #f3a847
 
     &__region-modal
         color: $header-font-color
-        width: 53px
+        // width: 53px
+        height: 0px
+        width: 0px
+        margin: 12px 0 0 0
 
     &__account-modal
         width: 111px
         &__select
             color: $header-font-color
             width: 0
+            height: 0
+            margin: 5px 0 0 -5px
 
     &__orders
         width: 57px
