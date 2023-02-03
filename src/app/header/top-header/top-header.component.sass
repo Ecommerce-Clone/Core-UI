@@ -1,0 +1,98 @@
+$header-color: #131921
+$header-font-color: #fff
+$logo: url(assets/data/images/logo.svg)
+$button-color: #f3a847
+
+.header
+    background: $header-color
+
+    &__container
+        display: flex
+        padding: 0.5em
+        cursor: pointer
+
+        &:hover
+            border-style: solid
+            border-width: 0.5px
+            border-radius: 1px
+            border-color: #ffffff
+
+    &__text-container
+        display: flex
+        flex-direction: column
+        color: $header-font-color
+
+    &__text-top
+        font-size: 11px
+        font-weight: 400
+        color: #e2e7ee
+        line-height: 1em
+        padding: 0 0 2px 0
+
+    &__text-bottom
+        font-size: 15px
+        line-height: 1em
+
+    &__logo
+        padding: 17px 0 0 0
+
+        &__text
+            color: $header-font-color
+            padding: 10px 0 0 0
+
+    &__location
+        &__logo
+            width: 20px
+            height: 20px
+            padding: 8px 0 0 0
+
+    &__search-container
+        padding: 0.5em
+
+        &__toolbar
+            padding: 0
+            height: 2.2em
+            border-radius: 4px 4px 4px 4px
+
+            &__search-opt
+                width: 25px
+
+                &__label
+                    padding: 0 0 0 10px
+                    font-size: xx-small
+                    font-weight: 400
+                    color: #555
+                    cursor: pointer
+
+            &__text
+                width: 446px
+                height: 39px
+                border: 0
+
+            &__button
+                background: $button-color
+                height: 44px
+                width: 50px
+                border-radius: 0 4px 4px 0
+                cursor: pointer
+
+    &__region-modal
+        color: $header-font-color
+        // width: 53px
+        height: 0px
+        width: 0px
+        margin: 12px 0 0 0
+
+    &__account-modal
+        width: 111px
+        &__select
+            color: $header-font-color
+            width: 0
+            height: 0
+            margin: 5px 0 0 -5px
+
+    &__orders
+        width: 57px
+
+    &__cart
+        // width: 84px

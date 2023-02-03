@@ -1,1 +1,107 @@
-<p>top-header works!</p>
+<mat-toolbar class="header">
+  <!-- Amazon logo -->
+  <div class="header__container">
+    <div>
+      <img
+        width="100"
+        alt="Amazon logo"
+        class="header__logo"
+        src="assets/data/images/logo.svg"
+      />
+    </div>
+    <p class="header__logo__text">.in</p>
+  </div>
+
+  <!-- Customer location & logo -->
+  <div class="header__container">
+    <img
+      alt="Location logo"
+      class="header__location__logo"
+      src="assets/data/images/location.svg"
+    />
+    <div class="header__text-container">
+      <span class="header__text-top">Hello</span>
+      <span class="header__text-bottom">Select your address</span>
+    </div>
+  </div>
+
+  <!-- Search box with dropdown & serach button -->
+  <div class="header__search-container">
+    <mat-toolbar class="header__search-container__toolbar">
+      <mat-label class="header__search-container__toolbar__search-opt__label"
+        >All</mat-label
+      >
+      <mat-select
+        class="header__search-container__toolbar__search-opt"
+        disableRipple
+        panelClass=""
+      >
+        <mat-option *ngFor="let category of categories">
+          {{ category }}
+        </mat-option>
+      </mat-select>
+      <input
+        type="text"
+        matInput
+        class="header__search-container__toolbar__text"
+      />
+      <div mat-button class="header__search-container__toolbar__button"></div>
+    </mat-toolbar>
+  </div>
+
+  <!-- Language & Country -->
+  <div class="header__container">
+    <img
+      src="assets/data/images/india.svg"
+      style="height: 20px; width: 20px; margin: 18px 0 0 0"
+    />
+    <p style="color: #fff; margin: 12px 0 0 0; font-size: 14px">EN</p>
+    <mat-select class="header__region-modal">
+      <mat-option *ngFor="let pair of languages | keyvalue"
+        >{{ pair.key }}-{{ pair.value }}</mat-option
+      >
+      <mat-option>Learn more</mat-option>
+      <mat-option>You are shopping on Amazon.in</mat-option>
+      <mat-option>Change country/region.</mat-option>
+    </mat-select>
+  </div>
+
+  <!-- Hello customer, Account & lists modal -->
+  <div class="header__container">
+    <div class="header__account-modal header__text-container">
+      <span class="header__text-top">Hello, signin</span>
+      <span class="header__text-bottom">Account & Lists</span>
+    </div>
+    <mat-select class="header__account-modal__select"></mat-select>
+  </div>
+
+  <!-- Returns & Orders -->
+  <div class="header__container">
+    <div class="header__orders header__text-container">
+      <span class="header__text-top">Returns</span>
+      <span class="header__text-bottom">& Orders</span>
+    </div>
+  </div>
+
+  <!-- Cart logo & button -->
+  <div
+    class="header__container header__text-container"
+    style="flex-direction: row"
+  >
+    <div>
+      <p
+        style="
+          font-size: 15px;
+          margin: -4px 0 -17px 13px;
+          z-index: 1;
+          position: relative;
+          color: #f3a847;
+        "
+      >
+        {{ itemsInCart }}
+      </p>
+      <img src="assets/data/images/cart.svg" style="width: 30px" />
+    </div>
+    <p style="margin: 15px 0 0 0; font-size: 15px">Cart</p>
+  </div>
+</mat-toolbar>
