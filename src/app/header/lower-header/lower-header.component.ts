@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSidenavModule } from '@angular/material/sidenav';
+
+
+
 
 @Component({
   selector: 'app-lower-header',
@@ -19,6 +23,8 @@ export default class LowerHeaderComponent implements OnInit {
     'Amazon Pay',
     'Home & kitchen'
   ];
+
+  
 
   constructor() { }
 
