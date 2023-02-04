@@ -50,7 +50,7 @@ workflows:
   test_workflow:
     jobs:
       - code_qlty:
-          context: 
+          context:
             - ecom-clone
           filters:
             branches:
