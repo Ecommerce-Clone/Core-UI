@@ -7,7 +7,9 @@ import { MaterialModule } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { FooterModule } from './footer/footer.module';
+import { FooterModule } from './footer/footer.module'
+import { BodyModule } from './body/body.module';
+import { BodyComponent } from './body/body.component';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,6 +20,7 @@ import { FooterModule } from './footer/footer.module';
     MaterialModule,
     HeaderModule,
     FooterModule,
+    BodyModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
