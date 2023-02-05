@@ -1,2 +1,26 @@
+.container
+    width: 100vw
+
 .toolbar
     background: #232f3e
+    height: fit-content
+    color: #fff
+    justify-content: space-around
+
+    &__table
+        border-collapse: collapse
+        justify-content: center
+        display: flex
+        flex-direction: column
+
+        thead
+            font-size: 0.6rem
+            cursor: pointer
+            img
+                width: 6%
+        td
+            cursor: pointer
+            font-weight: 200
+            font-size: 0.5rem
+            &:hover
+                text-decoration: underline
