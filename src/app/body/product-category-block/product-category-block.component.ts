@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BodyServiceService } from '../body-service.service';
 
 @Component({
   selector: 'app-product-category-block',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-category-block.component.sass']
 })
 export class ProductCategoryBlockComponent implements OnInit {
-
-  constructor() { }
+  
+  constructor(private bodyServiceService:BodyServiceService) { }
 
   ngOnInit(): void {
+    this.getProducts();
+  }
+  getProducts() {
+    this.bodyServiceService.fetchProducts().subscribe((prods)=>{console.log(prods)})
   }
 
 }
