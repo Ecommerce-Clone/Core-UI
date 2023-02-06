@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-upper-footer',
   templateUrl: './upper-footer.component.html',
   styleUrls: ['./upper-footer.component.sass'],
 })
-export class UpperFooterComponent implements OnInit {
+export class UpperFooterComponent {
   dropdown: boolean = false;
 
   aboutUs: string[] = [
@@ -65,8 +65,4 @@ export class UpperFooterComponent implements OnInit {
     'Let Us Help You': this.letUsHelpYou,
   };
   entries = Object.entries(this.upperFooterContent);
-
-  constructor() {}
-
-  ngOnInit(): void {}
 }
