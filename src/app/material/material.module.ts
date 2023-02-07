@@ -5,6 +5,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatCardModule } from '@angular/material/card';
 
 let MATERIAL_MODULES = [
   MatSidenavModule,
@@ -14,6 +15,7 @@ let MATERIAL_MODULES = [
   FormsModule,
   ReactiveFormsModule,
   MatDividerModule,
+  MatCardModule,
 ];
 
 @NgModule({
