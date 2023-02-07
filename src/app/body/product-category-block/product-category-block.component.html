@@ -1,22 +1,32 @@
 <div class="body">
     <div class="category-block">
-        <h1>Up to 60% off | Styles for women</h1>
-        <p>dsfib</p>sdfygbawn
-        rgyh
+        <h1>Automotive essentials | Up to 60% off</h1>
+            <li class="product" *ngFor="let product of products">
+                <img style="height: 80%; width: 100%;" src = "{{product.image_link}}">
+                {{ product.category_name }}
+            </li> 
+    </div>
+    <div class="category-block">
+        <h1>Up to 60% off | Professional tools, testing & more</h1>
+        <li class="product" *ngFor="let product of products">
+            <img style="height: 80%; width: 100%;" src = "{{product.image_link}}">
+            {{ product.category_name }}
+        </li> 
     </div>
     <div class="category-block">
         <h1>Up to 60% off | Styles for women</h1>
-        dthdrth
-        fyjh
-        ryuj<br>
-
-        <br>
-        wru
-    </div>
-    <div class="category-block">
-        <h1>Up to 60% off | Styles for women</h1>
+        <li class="product" *ngFor="let product of products">
+            <img style="height: 80%; width: 100%;" src = "{{product.image_link}}">
+            {{ product.category_name }}
+        </li> 
     </div>
     <div class="category-block-last">
         <h1>Up to 60% off | Styles for women</h1>
+        <li class="product" *ngFor="let product of products">
+            <img style="height: 80%; width: 100%;" src = "{{product.image_link}}">
+            {{ product.category_name }}
+        </li> 
     </div>
+
+    
 </div>

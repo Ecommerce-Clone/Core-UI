@@ -10,6 +10,8 @@ import { AppComponent } from './app.component';
 import { FooterModule } from './footer/footer.module'
 import { BodyModule } from './body/body.module';
 import { BodyComponent } from './body/body.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,9 +20,10 @@ import { BodyComponent } from './body/body.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    HttpClientModule,
     HeaderModule,
     FooterModule,
-    BodyModule,
+    BodyModule
   ],
   providers: [],
   bootstrap: [AppComponent],
