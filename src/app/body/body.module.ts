@@ -5,15 +5,9 @@ import { BodyComponent } from './body.component';
 import { MaterialModule } from '../material/material.module';
 import { DealsComponent } from './deals/deals.component';
 
-
-
 @NgModule({
-  declarations: [
-    ProductCategoryBlockComponent,BodyComponent, DealsComponent
-  ],
-  imports: [
-    CommonModule,MaterialModule
-  ],
+  declarations: [ProductCategoryBlockComponent, BodyComponent, DealsComponent],
+  imports: [CommonModule, MaterialModule],
   exports: [BodyComponent],
 })
-export class BodyModule { }
+export class BodyModule {}

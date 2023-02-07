@@ -3,12 +3,11 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-export class BodyServiceService {
-
-  constructor(private http:HttpClient) { }
-  fetchProducts():Observable<any> {
-    return this.http.get("../../../assets/product.json");
+export class BodyService {
+  constructor(private http: HttpClient) {}
+  fetchData(endpoint: string): Observable<any> {
+    return this.http.get('assets/data/raw_data/' + endpoint);
   }
 }

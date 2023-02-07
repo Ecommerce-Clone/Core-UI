@@ -1,1 +1,42 @@
-<p>deals works!</p>
+<mat-card class="container">
+  <mat-card-header>
+    <div class="container__header">Today's Deals</div>
+    <div class="container__all-deals">See all deals</div>
+  </mat-card-header>
+  <mat-card-content class="container__content">
+    <div
+      *ngFor="let category of categories"
+      class="container__content__category"
+    >
+      <mat-card class="container__img-container">
+        <img [src]="category.image" />
+      </mat-card>
+      <mat-card-content
+        style="
+          display: flex;
+          padding: 0.3rem 0;
+          font-weight: 500;
+          font-size: 0.7rem;
+        "
+      >
+        <div style="background: #cc0c39; color: #fff">
+          <div style="padding: 0 0.3rem">Up to {{ category.rebate }}% off</div>
+        </div>
+        <div style="color: #cc0c39; padding: 0 0.2rem">Deal of the day</div>
+      </mat-card-content>
+      <mat-card-content style="display: flex">
+        <div>
+          ₹{{ category.price }}
+          <!-- <sup>00</sup> -->
+        </div>
+        <div style="padding: 0 0.2rem; display: flex; font-size: 0.7rem">
+          <div>M.R.P.:</div>
+          <div class="cut-text">₹{{ category.mrp }}.00</div>
+        </div>
+      </mat-card-content>
+      <mat-card-content style="font-size: 0.7rem"
+        >{{ category.name }} available at ₹{{ category.mrp }}</mat-card-content
+      >
+    </div>
+  </mat-card-content>
+</mat-card>
