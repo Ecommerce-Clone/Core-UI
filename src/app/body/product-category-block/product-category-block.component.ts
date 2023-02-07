@@ -1,6 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { BodyServiceService } from '../body-service.service';
 
+interface product {
+  id : number;
+  category_name : string;
+  image_link : string;
+}
+
+
 @Component({
   selector: 'app-product-category-block',
   templateUrl: './product-category-block.component.html',
@@ -9,12 +16,12 @@ import { BodyServiceService } from '../body-service.service';
 export class ProductCategoryBlockComponent implements OnInit {
   
   constructor(private bodyServiceService:BodyServiceService) { }
-
+  products : product[] = [];
   ngOnInit(): void {
     this.getProducts();
   }
   getProducts() {
-    this.bodyServiceService.fetchProducts().subscribe((prods)=>{console.log(prods)})
+     this.bodyServiceService.fetchProducts().subscribe((data:product[])=>{this.products = data});
   }
 
 }
