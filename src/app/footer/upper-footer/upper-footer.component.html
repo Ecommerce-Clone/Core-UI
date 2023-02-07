@@ -1,3 +1,36 @@
-<mat-toolbar class="toolbar"></mat-toolbar>
-<mat-divider></mat-divider>
-<mat-toolbar class="toolbar"></mat-toolbar>
+<div class="container">
+  <mat-toolbar class="toolbar">
+    <div *ngFor="let value of entries" class="toolbar__table">
+      <table>
+        <thead>
+          {{
+            value[0]
+          }}
+        </thead>
+        <tr *ngFor="let element of value[1]">
+          <td>{{ element }}</td>
+        </tr>
+      </table>
+    </div>
+  </mat-toolbar>
+  <mat-divider></mat-divider>
+  <mat-toolbar class="toolbar">
+    <table class="toolbar__table">
+      <thead style="justify-content: center; display: flex; padding: 0.5em">
+        <img
+          src="assets/data/images/logo.svg"
+          style="padding: 0 5em; margin-top: 0.3em"
+        />
+        <mat-label style="cursor: pointer; padding: 0 1em; border: 1px solid"
+          >English
+          <mat-select style="width: 0.3em"></mat-select>
+        </mat-label>
+      </thead>
+      <tbody style="justify-content: center; display: flex">
+        <td *ngFor="let element of countries" style="padding: 0.3em">
+          {{ element }}
+        </td>
+      </tbody>
+    </table>
+  </mat-toolbar>
+</div>

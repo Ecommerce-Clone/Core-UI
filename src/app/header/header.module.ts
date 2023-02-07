@@ -5,9 +5,11 @@ import { HeaderComponent } from './header.component';
 import LowerHeaderComponent from './lower-header/lower-header.component';
 import { MaterialModule } from '../material/material.module';
 
+import { BodyModule } from '../body/body.module';
+
 @NgModule({
-  declarations: [TopHeaderComponent, HeaderComponent, LowerHeaderComponent],
-  imports: [CommonModule, MaterialModule],
-  exports: [HeaderComponent],
+    declarations: [TopHeaderComponent, HeaderComponent, LowerHeaderComponent],
+    exports: [HeaderComponent],
+    imports: [CommonModule, MaterialModule, BodyModule,]
 })
 export class HeaderModule {}
