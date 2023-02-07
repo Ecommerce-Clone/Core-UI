@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-top-header',
   templateUrl: './top-header.component.html',
   styleUrls: ['./top-header.component.sass'],
 })
-export class TopHeaderComponent implements OnInit {
+export class TopHeaderComponent {
   itemsInCart = 0;
 
   categories: string[] = [
@@ -65,8 +65,4 @@ export class TopHeaderComponent implements OnInit {
   };
 
   selected = { English: 'EN' };
-
-  constructor() {}
-
-  ngOnInit(): void {}
 }

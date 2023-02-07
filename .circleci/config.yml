@@ -39,7 +39,10 @@ jobs:
       # Upload Code Coverage Report to codecov.io
       - run:
           name: Code Coverage Upload
-          command: sh -c 'curl -Os https://uploader.codecov.io/latest/linux/codecov && chmod +x codecov && ./codecov'
+          command: |
+            curl -Os https://uploader.codecov.io/latest/linux/codecov
+            chmod +x codecov 
+            ./codecov -t $CODECOV_TOKEN
 
 workflows:
   version: 2
@@ -47,6 +50,8 @@ workflows:
   test_workflow:
     jobs:
       - code_qlty:
+          context:
+            - ecom-clone
           filters:
             branches:
               only:
