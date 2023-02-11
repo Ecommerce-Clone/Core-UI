@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SharedService } from 'src/app/shared.service';
 
 @Component({
   selector: 'app-top-header',
@@ -65,4 +66,11 @@ export class TopHeaderComponent {
   };
 
   selected = { English: 'EN' };
+  sidenavOpen!: boolean;
+
+  constructor(private sharedService: SharedService) {
+    sharedService.currentSidenavOpened.subscribe((value) => {
+      this.sidenavOpen = value;
+    });
+  }
 }

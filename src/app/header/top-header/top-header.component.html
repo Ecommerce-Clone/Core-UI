@@ -1,4 +1,65 @@
 <mat-toolbar class="header">
+  <mat-sidenav-container style="display: contents">
+    <mat-sidenav style="width: 9cm" [opened]="sidenavOpen">
+      <mat-toolbar class="header" style="height: 70px">
+        <img
+          height="40px"
+          width="40px"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNStYe1LPjbp6FEUZI4BWewc8M56OBYf2Wyg&usqp=CAU"
+        />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <h2>Hello, <b>Aman</b></h2></mat-toolbar
+      >
+      <table>
+        <th style="text-align: left">
+          <h1><b>Trending</b></h1>
+        </th>
+        <tr>
+          <td><h3>Best Sellers</h3></td>
+        </tr>
+        <tr>
+          <td><h3>New Releases</h3></td>
+        </tr>
+        <tr>
+          <td><h3>Movers and shakers</h3></td>
+        </tr>
+      </table>
+      <hr />
+      <table>
+        <th style="text-align: left">
+          <h1><b>Digital Content And Devices</b></h1>
+        </th>
+        <tr>
+          <td><h3>Echo & Alexa</h3></td>
+        </tr>
+        <tr>
+          <td><h3>Fire TV</h3></td>
+        </tr>
+        <tr>
+          <td><h3>Kindle E-Readers & e-Books</h3></td>
+        </tr>
+        <tr>
+          <td><h3>Amazon Prime Videos</h3></td>
+        </tr>
+      </table>
+      <hr />
+      <table>
+        <th style="text-align: left">
+          <h1><b>By Category</b></h1>
+        </th>
+        <tr>
+          <td><h3>Mobiles Computers</h3></td>
+        </tr>
+        <tr>
+          <td><h3>TV Appliances Electronics</h3></td>
+        </tr>
+        <tr>
+          <td><h3>Men's Fashion</h3></td>
+        </tr>
+      </table>
+    </mat-sidenav>
+  </mat-sidenav-container>
+
   <!-- Amazon logo -->
   <div class="header__container">
     <div>
