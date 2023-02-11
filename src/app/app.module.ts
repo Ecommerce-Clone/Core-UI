@@ -7,11 +7,10 @@ import { MaterialModule } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { FooterModule } from './footer/footer.module'
+import { FooterModule } from './footer/footer.module';
 import { BodyModule } from './body/body.module';
-import { BodyComponent } from './body/body.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-
+import { HttpClientModule } from '@angular/common/http';
+import { UserRegModule } from './user-reg/user-reg.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,11 +18,13 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule,
     HttpClientModule,
+    MaterialModule,
+
     HeaderModule,
     FooterModule,
-    BodyModule
+    BodyModule,
+    UserRegModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

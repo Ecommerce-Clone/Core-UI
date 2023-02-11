@@ -1,16 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import { SignupComponent } from './user-reg/signup/signup.component';
 
-const routes: Routes = [
-  {path:"",redirectTo:""},
-  {path:"",component:AppComponent},
-  {path:"/signup",component:SignupComponent,pathMatch:'full'}
-];
+const routes: Routes = [{ path: '', component: AppComponent }];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
