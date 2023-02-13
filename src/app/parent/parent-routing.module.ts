@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+import { ParentComponent } from './parent.component';
 
 const routes: Routes = [
   {
-    path: 'user-profile',
-    loadChildren: () =>
-      import('./../user-reg/user-reg.module').then((m) => m.UserRegModule),
+    path: '',
+    // loadChildren: () => import('../body/body.module').then((m) => m.BodyModule),
+    component: ParentComponent,
   },
 ];
 
@@ -15,4 +16,4 @@ const routes: Routes = [
   imports: [CommonModule, RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class HeaderRoutingModule {}
+export class ParentRoutingModule {}
