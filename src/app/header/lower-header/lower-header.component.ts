@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Output } from '@angular/core';
+import { SharedService } from 'src/app/shared.service';
+import { EventEmitter } from 'stream';
 
 @Component({
   selector: 'app-lower-header',
@@ -6,6 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./lower-header.component.sass'],
 })
 export default class LowerHeaderComponent {
+  sidenavOpen!: boolean;
   list1: string[] = [
     'Amazon miniTV',
     'Best Sellers',
@@ -18,4 +21,14 @@ export default class LowerHeaderComponent {
     'Amazon Pay',
     'Home & kitchen',
   ];
+
+  constructor(private sharedService: SharedService) {
+    this.sharedService.currentSidenavOpened.subscribe((value) => {
+      this.sidenavOpen = value;
+    });
+  }
+
+  emitToggleValue(value: boolean) {
+    this.sharedService.changeSidenavOpened(!value);
+  }
 }

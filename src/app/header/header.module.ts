@@ -8,8 +8,8 @@ import { MaterialModule } from '../material/material.module';
 import { BodyModule } from '../body/body.module';
 
 @NgModule({
-    declarations: [TopHeaderComponent, HeaderComponent, LowerHeaderComponent],
-    exports: [HeaderComponent],
-    imports: [CommonModule, MaterialModule, BodyModule,]
+  declarations: [TopHeaderComponent, HeaderComponent, LowerHeaderComponent],
+  imports: [CommonModule, MaterialModule, BodyModule],
+  exports: [HeaderComponent],
 })
 export class HeaderModule {}
